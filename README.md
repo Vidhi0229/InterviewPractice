@@ -1,5 +1,6 @@
 # InterviewPractice
 
+## String Manipulation
 - Reverse a String: Write a function to reverse a given string.
 
 - Palindrome Check: Create a function to check if a given string is a palindrome (reads the same forwards and backwards).
