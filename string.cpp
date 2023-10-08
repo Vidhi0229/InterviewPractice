@@ -3,12 +3,15 @@ using namespace std;
 string Reverse(string String);
 void palindrome(string String);
 void Vowels_and_Consonants(string String);
+void anagrams(string word1, string word2);
 
 int main(){
-    string String;
-    cout << "Enter String: ";
-    cin >> String;
-    Vowels_and_Consonants(String);
+    string String1, String2;
+    cout << "Enter String1: ";
+    cin >> String1;
+    cout << "Enter String2: ";
+    cin >> String2;
+    anagrams(String1, String2);
 }
 
 //Reverse a String: Write a function to reverse a given string.
@@ -30,7 +33,7 @@ void palindrome(string String){
     }
 }
 
-//Count Vowels and Consonants: Write a program to count the number of vowels and consonants in a given string.
+//Count Vowels and Conso(nants: Write a program to count the number of vowels and consonants in a given string.
 void Vowels_and_Consonants(string String){
     transform(String.begin(), String.end(), String.begin(), ::tolower);
     string vowel = {'a', 'e', 'i', 'o', 'u'};
@@ -47,4 +50,17 @@ void Vowels_and_Consonants(string String){
 
     cout << "Vowels: "<< c_vowel<<"\n"<< "Consonants: "<<c_consonant<<"\n";
 
+}
+
+//Anagram Detection: Write a function that checks if two strings are anagrams of each other (contain the same characters with the same frequency).
+void anagrams(string word1, string word2){
+    sort(word1.begin(), word1.end());
+    sort(word2.begin(), word2.end());
+
+    if(word1 == word2){
+        cout << "Yes, these string are anagram\n";
+    }
+    else{
+        cout << "No, these string are not anagram\n";
+    }
 }
